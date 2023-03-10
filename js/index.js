@@ -14,4 +14,19 @@ function loadCurrentDate() {
   yyyy = parseInt(yyyy);
   today = yyyy+'-'+doubleDigit(mm)+'-'+doubleDigit(dd);
   document.getElementById("date").value = today;
+} 
+
+var selectInput = document.getElementById('category');
+
+var select_options = ['option1', 'option2', 'option3', 'hello'];
+
+for (var i of select_options) {
+    console.log(i)
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = i;
+    selectInput.appendChild(opt);
 }
+
+const jsonFile = require("./data/budget.json");
+console.log(jsonFile);

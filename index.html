@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PBS</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./imgs/favicon.ico" type="image/x-icon">
-    <script src="./js/index.js"></script>
-  </head>
-  <body onload="loadCurrentDate()">
-    <header>
-        <h1>Personal Budgeting System</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>PBS</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./imgs/favicon.ico" type="image/x-icon">
+
+    </head> 
+    <body onload="loadCurrentDate()">
+        <header>
+            <h1>Personal Budgeting System</h1>
+        </header>
     <main>
         <form>
             <legend>Enter Budgeting Event</legend>
@@ -25,15 +25,16 @@
             <label for="date">date:</label>
             <input type="date" id="date" name="date">
             <label for="category">category:</label>
-            <select name="category" id="categpry">
-                <option value="option1" >option1</option>
-                <option value="option2" >option2</option>
-                <option value="option3" >option3</option>
-            </select>
+            <select name="category" id="category"></select>
 
             <input type="submit" id="submit" value="submit">
         </form>
 
     </main>
-  </body>
+
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script type="text/javascript" src="./data/budget.json"></script>
+    <script src="./js/index.js"></script>
+    
+    </body>
 </html>
